@@ -62,6 +62,9 @@ public class ContactBook {
                 if (cur == tail) {
                     tail = slow; // If the deleted node is the last node, set it to the previous node
                 }
+                if (head.next == null) {
+                    tail = head; // If linked list is empty, reset tail
+                }
                 slow.next = cur.next;
                 return; // Breaks teh loop and exits out of the function
             }
