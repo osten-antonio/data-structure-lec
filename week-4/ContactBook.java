@@ -59,6 +59,9 @@ public class ContactBook {
                 the previous node will skip to the next of the faster node,
                 effectively removing it from the linked list
                  */
+                if (cur == tail) {
+                    tail = slow; // If the deleted node is the last node, set it to the previous node
+                }
                 slow.next = cur.next;
                 return; // Breaks teh loop and exits out of the function
             }
